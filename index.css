@@ -2,17 +2,68 @@ a
 {
     text-decoration-line: none;
 }
-#T
-{
-    margin-top: -10px;
-    font-size: 25px;
-    background-color: rgb(240, 222, 255);
+li {
+    list-style: none;
 }
-#title
-{
+
+.horizontal_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(232, 205, 255);
+}
+.horizontal_menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.horizontal_menu > li {
+    float: left;
+}
+.horizontal_menu > li a {
+    display: block;
+    background-color: rgb(238, 200, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.horizontal_menu > li a:hover/*:not(.active)*/ {
+    background-color: rgb(249, 221, 255);
+}
+.active {
+    background-color: #4CAF50;
+}
+
+
+.vartical_menu {
+    margin-left: -25px;
+    width: 300px;
+    overflow: hidden;
+}
+.vartical_menu > li {
+    width: 50%; /* n * 리스트 개수 = 100% */
+    line-height: 25px;
+    background-color: rgb(238, 200, 255);
+}
+.vartical_menu a {
     color: rgb(107, 74, 128);
 }
-.menu
-{
-   border: 1px solid #444444;
+
+.submenu > li {
+    line-height: 20px;
+    background-color: rgb(249, 221, 255);
 }
+.submenu {
+    height: 0;
+    overflow: hidden;
+}
+ 
+.vartical_menu > li:hover {
+    background-color: rgb(249, 221, 255);
+    padding-left: 20px;
+    transition-duration: 0.5s;
+} 
+.vartical_menu > li:hover .submenu {
+    height: 105px; /* submenu개수 * submenu list-height */
+    transition-duration: 1s;
+} 
