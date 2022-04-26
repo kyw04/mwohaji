@@ -1,16 +1,17 @@
 
-function show_submenu(index)
+function show_submenu(id)
 {
-    var li = document.getElementById("submenu"); //[index];
+    var li = document.getElementById(id); 
     let children_lenght = li.children.length;
     let children_height = li.children[0].clientHeight;
-    var height = children_lenght * children_height;
-    
+    let submenu_height = children_lenght * children_height + 5;
 
-    li.style.height = height.toString();
-    li.style.lineHeight = 1;
+    li.style.height = submenu_height + 'px';
+}
 
-    console.log(li.style);
-    console.log(children_lenght);
-    console.log(children_height);
+function close_submenu(id)
+{
+    var li = document.getElementById(id);
+    // li.style.transitionDuration = '0.5s';
+    li.style.height = 0;
 }

@@ -18,10 +18,9 @@
     <h2>랜덤</h2>
 
     <ul class="vartical_menu">
-
-        <li onmouseenter="show_submenu(0)">
+        <li onmouseenter="show_submenu('indoor_hobby')" onmouseleave="close_submenu('indoor_hobby')">
             <a href="#" >실내 취미</a>
-            <ul id="submenu">
+            <ul id="indoor_hobby">
               <li><a href="#">submenu01</a></li>
               <li><a href="#">submenu02</a></li>
               <li><a href="#">submenu03</a></li>
@@ -34,9 +33,9 @@
             </ul>
         </li>
 
-        <li onmouseenter="show_submenu(1)">
+        <li onmouseenter="show_submenu('outdoor_hobby')" onmouseleave="close_submenu('outdoor_hobby')">
             <a href="#">야외 취미</a>
-            <ul class="submenu">
+            <ul id="outdoor_hobby">
               <li><a href="#">submenu01</a></li>
               <li><a href="#">submenu02</a></li>
               <li><a href="#">submenu03</a></li>
