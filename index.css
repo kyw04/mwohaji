@@ -10,7 +10,7 @@ li {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: rgb(232, 205, 255);
+    background-color: rgb(238, 200, 255);
 }
 .horizontal_menu:after {
     content: '';
@@ -30,7 +30,34 @@ li {
 .horizontal_menu > li a:hover/*:not(.active)*/ {
     background-color: rgb(249, 221, 255);
 }
-
+.horizontal_menu > input {
+    padding: 15px 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    background-color: rgb(249, 221, 255);
+    transition-duration: 0.5s;
+}
+.horizontal_menu > input:focus {
+    outline: none;
+}
+.horizontal_menu > input:focus::placeholder {
+    transition-duration: 0.5s;
+    color: rgb(249, 221, 255);
+}
+.horizontal_menu > .icon img {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    margin-left: 17px;
+    margin-right: 17px;
+    z-index: 1;
+    color: black;
+}
 
 .vartical_menu {
     margin-left: -25px;
@@ -48,7 +75,7 @@ li {
 
 #outdoor_hobby, #indoor_hobby {
     height: 0;
-    transition: 1s;
+    transition-duration: 1s;
     overflow: hidden;
 }
 
@@ -56,4 +83,10 @@ li {
     background-color: rgb(249, 221, 255);
     padding-left: 20px;
     transition-duration: 0.5s;
-} 
+}
+
+
+#test {
+    overflow: hidden;
+    height: 0px;
+}
