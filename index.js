@@ -45,3 +45,8 @@ function close_submenu(id)
     // li.style.transitionDuration = '0.5s';
     li.style.height = 0;
 }
+
+function test()
+{
+    console.log("ok");
+}

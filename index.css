@@ -68,22 +68,26 @@ input:focus::placeholder {
 
 
 .random {
-    text-align: center;
-    margin-left: 25px;
-    margin-top: -1000px;
+    position: absolute;
+    height: 55px;
+    width: 95px;
 
-    /* padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px; */
+    padding: 35px 0 0px 0;
 
-    background-color: rgb(182, 55, 241);
+    background-color: #DDCFFF;
     border-radius: 100%;
-}
+    text-align: center;
 
+    transition: 0.5s;
+}
+.random:hover {
+    background-color: #b28ccf;
+    margin-left: 10px;
+}
 
 .vartical_menu {
     margin-left: -25px;
+    margin-top: 100px;
     width: 300px;
     overflow: hidden;
 }
