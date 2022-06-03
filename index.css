@@ -71,8 +71,10 @@ input:focus::placeholder {
     position: absolute;
     height: 55px;
     width: 95px;
-
+    
+    box-shadow: 3px 3px 3px black;
     padding: 35px 0 0px 0;
+    margin-left: 10px;
 
     background-color: #DDCFFF;
     border-radius: 100%;
@@ -81,8 +83,12 @@ input:focus::placeholder {
     transition: 0.5s;
 }
 .random:hover {
-    background-color: #b28ccf;
-    margin-left: 10px;
+    background-color: rgb(207, 148, 255);
+    margin-left: 20px;
+}
+.random:active {
+    transition: 1s;
+    box-shadow: 3px 3px 3px black inset;
 }
 
 .vartical_menu {
