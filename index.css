@@ -1,9 +1,14 @@
-a
-{
+
+
+a {
     text-decoration-line: none;
 }
 li {
     list-style: none;
+}
+table, th, tr, td {
+    border: 1px solid black;
+    text-align: center;
 }
 input {
     padding: 15px 20px;
@@ -96,6 +101,7 @@ input:focus::placeholder {
     margin-top: 100px;
     width: 300px;
     overflow: hidden;
+    float: left;
 }
 .vartical_menu > li {
     width: 50%;
@@ -106,7 +112,7 @@ input:focus::placeholder {
     color: rgb(107, 74, 128);
 }
 
-#outdoor_hobby, #indoor_hobby {
+.vartical_menu ul {
     height: 0;
     transition-duration: 1s;
     overflow: hidden;
@@ -118,6 +124,12 @@ input:focus::placeholder {
     transition-duration: 0.5s;
 }
 
+
+#floor {
+    height : auto;
+    min-height: 100%;
+    text-align: center;
+}
 
 #test {
     overflow: hidden;

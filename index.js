@@ -11,10 +11,8 @@ let data1 = [
 "사격", "쇼핑", "스케이트보딩", "스키", "스킴보딩",
 "스카이다이빙", "슬래클라이닝", "스노보드", "축구", "물수제비",
 "파도타기", "수영", "태권도", "태극권", "휴가",
-"걷기", "수상 스포츠"
-]
+"걷기", "수상 스포츠", 
 
-let data2 = [
 "3차원 인쇄", "연기", "아마추어 무선", "배턴 트월링", "보드 게임",
 "캘리그래피", "컴퓨터 프로그래밍", "조리", "코스프레", "십자수",
 "십자말", "암호학", "춤", "디지털 아트", "DIY",
@@ -44,6 +42,14 @@ function close_submenu(id)
     var li = document.getElementById(id);
     // li.style.transitionDuration = '0.5s';
     li.style.height = 0;
+}
+
+function random_click()
+{
+    var index = Math.random() * data1.length;
+    index = parseInt(index);
+    console.log(index);
+    alert(data1[index]);
 }
 
 function test()
