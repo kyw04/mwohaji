@@ -20,12 +20,13 @@ let data1 = [
 "게이밍", "계보학", "양액재배", "빙상 스케이트", "직소 퍼즐",
 "저글링", "뜨개질", "레이스 제작", "가죽 공예", "레고 조립",
 "음악 듣기", "마술", "종이접기", "회화", "애완동물",
-"우취", "악기 연주", "도예", "퍼즐", "읽기",
+"우취", "악기 연주", "도예", "퍼즐", "책 읽기",
 "조각", "바느질", "가창", "스케치", "비누",
 "스탠드업 코미디", "탁구", "태팅", "박제", "비디오 게임",
 "영화 보기", "텔레비전 시청", "월드 와이드 웹", "위키백과 편집", "목각",
 "목공", "쓰기", "요요", "요가"
-]
+];
+let data2 = [ "indoor_hobby", "outdoor_hobby" ];
 
 function show_submenu(id)
 {
@@ -49,7 +50,17 @@ function random_click()
     var index = Math.random() * data1.length;
     index = parseInt(index);
     console.log(index);
-    alert(data1[index]);
+    if (confirm(data1[index] + "(이/가) 있는 곳으로 이동하시겠습니까?"))
+    {
+        var tempIndex;
+        if (index > 62)
+            tempIndex = 0;
+        else
+            tempIndex = 1;
+        
+        document.getElementById(data2[tempIndex]).scrollIntoView();
+    }
+    
 }
 
 function test()

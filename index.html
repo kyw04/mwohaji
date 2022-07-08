@@ -19,223 +19,227 @@
         </div>
     </ul><br>
     
-    <div class="random" onclick="random_click()"><a href="#">랜덤</a></div>
-    
+    <div id="menu">
+        <div class="random" onclick="random_click()"><a href="#">랜덤</a></div>
 
-    <ul class="vartical_menu">
-        <li onmouseenter="show_submenu('hobby')" onmouseleave="close_submenu('hobby')">
-            <a href="#" >취미</a>
-            <ul id="hobby">
-              <li><a href="#indoor_hobby"> 실내 취미</a></li>
-              <li><a href="#outdoor_hobby"> 야외 취미</a></li>
-            </ul>
-        </li>
+        <ul class="vartical_menu">
+            <li onmouseenter="show_submenu('hobby')" onmouseleave="close_submenu('hobby')">
+                <a href="#hobby" >취미</a>
+                <ul id="hobby">
+                <li><a href="#indoor_hobby"> 실내 취미</a></li>
+                <li><a href="#outdoor_hobby"> 야외 취미</a></li>
+                </ul>
+            </li>
 
-        <li onmouseenter="show_submenu('game')" onmouseleave="close_submenu('game')">
-            <a href="#">게임</a>
-            <ul id="game">
-              <li><a href="#">submenu01</a></li>
-              <li><a href="#">submenu02</a></li>
-            </ul>
-        </li>
+            <li onmouseenter="show_submenu('game')" onmouseleave="close_submenu('game')">
+                <a href="#game">게임</a>
+                <ul id="game">
+                <li><a href="#PC_game">PC 게임</a></li>
+                <li><a href="#Mobile_game">모바일 게임</a></li>
+                </ul>
+            </li>
 
-        <li onmouseenter="show_submenu('test')" onmouseleave="close_submenu('test')">
-            <a href="#">취미</a>
-            <ul id="test">
-              <li><a href="#">submenu01</a></li>
-              <li><a href="#">submenu02</a></li>
-              <li><a href="#">submenu03</a></li>
-              <li><a href="#">submenu04</a></li>
-              <li><a href="#">submenu05</a></li>
-            </ul>
-        </li>
-    </ul>
-
-    <div id="indoor_hobby">
-        <h2>실내 취미</h2>
-        <table>
-            <tr>
-                <td>3차원 인쇄</td>
-                <td>연기</td>
-                <td>아마추어 무선</td>
-                <td>배턴 트월링</td>
-                <td>보드 게임</td>
-            </tr>
-            <tr>
-                <td>캘리그래피</td>
-                <td>컴퓨터 프로그래밍</td>
-                <td>조리</td>
-                <td>코스프레</td>
-                <td>십자수</td>
-            </tr>
-            <tr>
-                <td>십자말</td>
-                <td>암호학</td>
-                <td>춤</td>
-                <td>디지털</td>
-                <td>아트</td>
-            </tr>
-            <tr>
-                <td>DIY</td>
-                <td>드라마</td>
-                <td>소묘</td>
-                <td>일렉트로닉스</td>
-                <td>자수</td>
-            </tr>
-            <tr>
-                <td>패션</td>
-                <td>게이밍</td>
-                <td>계보학</td>
-                <td>양액재배</td>
-                <td>빙상 스케이트</td>
-            </tr>
-            <tr>
-                <td>직소 퍼즐</td>
-                <td>저글링</td>
-                <td>뜨개질</td>
-                <td>레이스 제작</td>
-                <td>가죽 공예</td>
-            </tr>
-            <tr>
-                <td>레고 조립</td>
-                <td>음악 듣기</td>
-                <td>마술</td>
-                <td>종이접기</td>
-                <td>회화</td>
-            </tr>
-            <tr>
-                <td>애완동물</td>
-                <td>우취</td>
-                <td>악기 연주</td>
-                <td>도예</td>
-                <td>퍼즐</td>
-            </tr>
-            <tr>
-                <td>읽기</td>
-                <td>조각</td>
-                <td>바느질</td>
-                <td>가창</td>
-                <td>스케치</td>
-            </tr>
-            <tr>
-                <td>비누</td>
-                <td>스탠드업 코미디</td>
-                <td>탁구</td>
-                <td>태팅</td>
-                <td>박제</td>
-            </tr>
-            <tr>
-                <td>비디오 게임</td>
-                <td>영화 보기</td>
-                <td>텔레비전 시청</td>
-                <td>월드 와이드 웹</td>
-                <td>위키백과 편집</td>
-            </tr>
-            <tr>
-                <td>목각</td>
-                <td>목공</td>
-                <td>쓰기</td>
-                <td>요요</td>
-                <td>요가</td>
-            </tr>
-        </table>
+            <li onmouseenter="show_submenu('test')" onmouseleave="close_submenu('test')">
+                <a href="#">취미</a>
+                <ul id="test">
+                <li><a href="#">submenu01</a></li>
+                <li><a href="#">submenu02</a></li>
+                <li><a href="#">submenu03</a></li>
+                <li><a href="#">submenu04</a></li>
+                <li><a href="#">submenu05</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
-
-    <div id="outdoor_hobby">
-        <h2>야외 취미</h2>
-        <table>
-            <tr>
-                <td>항공 스포츠</td>
-                <td>궁술</td>
-                <td>천문학</td>
-                <td>베이스 점핑</td>
-                <td>야구</td>
-            </tr>
-            <tr>
-                <td>농구</td>
-                <td>양봉</td>
-                <td>탐조</td>
-                <td>대장장이</td>
-                <td>보디빌딩</td>
-            </tr>
-            <tr>
-                <td>브라질리안 주짓수</td>
-                <td>야영</td>
-                <td>운전</td>
-                <td>어로</td>
-                <td>플라잉</td>
-            </tr>
-            <tr>
-                <td>원반 장난감</td>
-                <td>정원 가꾸기</td>
-                <td>지오캐싱</td>
-                <td>낙서</td>
-                <td>핸드볼</td>
-            </tr>
-            <tr>
-                <td>하이킹</td>
-                <td>마술</td>
-                <td>사냥</td>
-                <td>연날리기</td>
-                <td>카이트서핑</td>
-            </tr>
-            <tr>
-                <td>라이브 액션 롤플레잉 게임</td>
-                <td>금속 탐지</td>
-                <td>모터스포츠</td>
-                <td>등산</td>
-                <td>네트볼</td>
-            </tr>
-            <tr>
-                <td>오리엔티어링</td>
-                <td>페인트볼</td>
-                <td>파쿠르</td>
-                <td>사진술</td>
-                <td>폴로</td>
-            </tr>
-            <tr>
-                <td>래프팅</td>
-                <td>현수하강</td>
-                <td>암벽등반</td>
-                <td>롤러스케이팅</td>
-                <td>럭비</td>
-            </tr>
-            <tr>
-                <td>달리기</td>
-                <td>세일링</td>
-                <td>샌드 아트</td>
-                <td>스카우트 운동</td>
-                <td>스쿠버 다이빙</td>
-            </tr>
-            <tr>
-                <td>사격</td>
-                <td>쇼핑</td>
-                <td>스케이트보딩</td>
-                <td>스키</td>
-                <td>스킴보딩</td>
-            </tr>
-            <tr>
-                <td>스카이다이빙</td>
-                <td>슬래클라이닝</td>
-                <td>스노보드</td>
-                <td>축구</td>
-                <td>물수제비</td>
-            </tr>
-            <tr>
-                <td>파도타기</td>
-                <td>수영</td>
-                <td>태권도</td>
-                <td>태극권</td>
-                <td>휴가</td>
-            </tr>
-            <tr>
-                <td>걷기</td>
-                <td>수상 스포츠</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
+    <div id="index">
+        <div id="hobby">
+            <div id="indoor_hobby">
+                <h2>실내 취미</h2>
+                <table>
+                    <tr>
+                        <td>3차원 인쇄</td>
+                        <td>연기</td>
+                        <td>아마추어 무선</td>
+                        <td>배턴 트월링</td>
+                        <td>보드 게임</td>
+                    </tr>
+                    <tr>
+                        <td>캘리그래피</td>
+                        <td>컴퓨터 프로그래밍</td>
+                        <td>조리</td>
+                        <td>코스프레</td>
+                        <td>십자수</td>
+                    </tr>
+                    <tr>
+                        <td>십자말</td>
+                        <td>암호학</td>
+                        <td>춤</td>
+                        <td>디지털</td>
+                        <td>아트</td>
+                    </tr>
+                    <tr>
+                        <td>DIY</td>
+                        <td>드라마</td>
+                        <td>소묘</td>
+                        <td>일렉트로닉스</td>
+                        <td>자수</td>
+                    </tr>
+                    <tr>
+                        <td>패션</td>
+                        <td>게이밍</td>
+                        <td>계보학</td>
+                        <td>양액재배</td>
+                        <td>빙상 스케이트</td>
+                    </tr>
+                    <tr>
+                        <td>직소 퍼즐</td>
+                        <td>저글링</td>
+                        <td>뜨개질</td>
+                        <td>레이스 제작</td>
+                        <td>가죽 공예</td>
+                    </tr>
+                    <tr>
+                        <td>레고 조립</td>
+                        <td>음악 듣기</td>
+                        <td>마술</td>
+                        <td>종이접기</td>
+                        <td>회화</td>
+                    </tr>
+                    <tr>
+                        <td>애완동물</td>
+                        <td>우취</td>
+                        <td>악기 연주</td>
+                        <td>도예</td>
+                        <td>퍼즐</td>
+                    </tr>
+                    <tr>
+                        <td>책 읽기</td>
+                        <td>조각</td>
+                        <td>바느질</td>
+                        <td>가창</td>
+                        <td>스케치</td>
+                    </tr>
+                    <tr>
+                        <td>비누</td>
+                        <td>스탠드업 코미디</td>
+                        <td>탁구</td>
+                        <td>태팅</td>
+                        <td>박제</td>
+                    </tr>
+                    <tr>
+                        <td>비디오 게임</td>
+                        <td>영화 보기</td>
+                        <td>텔레비전 시청</td>
+                        <td>월드 와이드 웹</td>
+                        <td>위키백과 편집</td>
+                    </tr>
+                    <tr>
+                        <td>목각</td>
+                        <td>목공</td>
+                        <td>쓰기</td>
+                        <td>요요</td>
+                        <td>요가</td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div id="outdoor_hobby">
+                <h2>야외 취미</h2>
+                <table>
+                    <tr>
+                        <td>항공 스포츠</td>
+                        <td>궁술</td>
+                        <td>천문학</td>
+                        <td>베이스 점핑</td>
+                        <td>야구</td>
+                    </tr>
+                    <tr>
+                        <td>농구</td>
+                        <td>양봉</td>
+                        <td>탐조</td>
+                        <td>대장장이</td>
+                        <td>보디빌딩</td>
+                    </tr>
+                    <tr>
+                        <td>브라질리안 주짓수</td>
+                        <td>야영</td>
+                        <td>운전</td>
+                        <td>어로</td>
+                        <td>플라잉</td>
+                    </tr>
+                    <tr>
+                        <td>원반 장난감</td>
+                        <td>정원 가꾸기</td>
+                        <td>지오캐싱</td>
+                        <td>낙서</td>
+                        <td>핸드볼</td>
+                    </tr>
+                    <tr>
+                        <td>하이킹</td>
+                        <td>마술</td>
+                        <td>사냥</td>
+                        <td>연날리기</td>
+                        <td>카이트서핑</td>
+                    </tr>
+                    <tr>
+                        <td>라이브 액션 롤플레잉 게임</td>
+                        <td>금속 탐지</td>
+                        <td>모터스포츠</td>
+                        <td>등산</td>
+                        <td>네트볼</td>
+                    </tr>
+                    <tr>
+                        <td>오리엔티어링</td>
+                        <td>페인트볼</td>
+                        <td>파쿠르</td>
+                        <td>사진술</td>
+                        <td>폴로</td>
+                    </tr>
+                    <tr>
+                        <td>래프팅</td>
+                        <td>현수하강</td>
+                        <td>암벽등반</td>
+                        <td>롤러스케이팅</td>
+                        <td>럭비</td>
+                    </tr>
+                    <tr>
+                        <td>달리기</td>
+                        <td>세일링</td>
+                        <td>샌드 아트</td>
+                        <td>스카우트 운동</td>
+                        <td>스쿠버 다이빙</td>
+                    </tr>
+                    <tr>
+                        <td>사격</td>
+                        <td>쇼핑</td>
+                        <td>스케이트보딩</td>
+                        <td>스키</td>
+                        <td>스킴보딩</td>
+                    </tr>
+                    <tr>
+                        <td>스카이다이빙</td>
+                        <td>슬래클라이닝</td>
+                        <td>스노보드</td>
+                        <td>축구</td>
+                        <td>물수제비</td>
+                    </tr>
+                    <tr>
+                        <td>파도타기</td>
+                        <td>수영</td>
+                        <td>태권도</td>
+                        <td>태극권</td>
+                        <td>휴가</td>
+                    </tr>
+                    <tr>
+                        <td>걷기</td>
+                        <td>수상 스포츠</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
     <form id="test" action="">

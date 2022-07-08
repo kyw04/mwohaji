@@ -1,4 +1,19 @@
-
+body {
+    height: 100%;
+    width: 100%;
+}
+#menu {
+    float: left;
+    width: 30%;
+}
+#index {
+    float: left;
+    width: 70%;
+}
+#floor {
+    min-height: 100%;
+    text-align: center;
+}
 
 a {
     text-decoration-line: none;
@@ -10,6 +25,7 @@ table, th, tr, td {
     border: 1px solid black;
     text-align: center;
 }
+
 input {
     padding: 15px 20px;
     border-top: none;
@@ -71,7 +87,6 @@ input:focus::placeholder {
     padding-left: 50px;
 }
 
-
 .random {
     position: absolute;
     height: 55px;
@@ -122,13 +137,6 @@ input:focus::placeholder {
     background-color: rgb(249, 221, 255);
     padding-left: 20px;
     transition-duration: 0.5s;
-}
-
-
-#floor {
-    height : auto;
-    min-height: 100%;
-    text-align: center;
 }
 
 #test {
