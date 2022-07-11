@@ -16,6 +16,7 @@ body {
 }
 
 a {
+    color: black;
     text-decoration-line: none;
 }
 li {
@@ -24,6 +25,8 @@ li {
 table, th, tr, td {
     border: 1px solid black;
     text-align: center;
+    background-color: white;
+    transition: 1.5s;
 }
 
 input {

@@ -10,8 +10,8 @@ let data1 = [
 "달리기", "세일링", "샌드 아트", "스카우트 운동", "스쿠버 다이빙",
 "사격", "쇼핑", "스케이트보딩", "스키", "스킴보딩",
 "스카이다이빙", "슬래클라이닝", "스노보드", "축구", "물수제비",
-"파도타기", "수영", "태권도", "태극권", "휴가",
-"걷기", "수상 스포츠", 
+"파도타기", "수영", "태권도", "태극권", "휴가", // 59
+"걷기", "수상 스포츠", // 61
 
 "3차원 인쇄", "연기", "아마추어 무선", "배턴 트월링", "보드 게임",
 "캘리그래피", "컴퓨터 프로그래밍", "조리", "코스프레", "십자수",
@@ -23,8 +23,8 @@ let data1 = [
 "우취", "악기 연주", "도예", "퍼즐", "책 읽기",
 "조각", "바느질", "가창", "스케치", "비누",
 "스탠드업 코미디", "탁구", "태팅", "박제", "비디오 게임",
-"영화 보기", "텔레비전 시청", "월드 와이드 웹", "위키백과 편집", "목각",
-"목공", "쓰기", "요요", "요가"
+"영화 보기", "텔레비전 시청", "월드 와이드 웹", "위키백과 편집", "목각", // 116
+"목공", "쓰기", "요요", "요가" // 120
 ];
 let data2 = [ "indoor_hobby", "outdoor_hobby" ];
 
@@ -47,20 +47,83 @@ function close_submenu(id)
 
 function random_click()
 {
-    var index = Math.random() * data1.length;
-    index = parseInt(index);
+    let index = Math.floor(Math.random() *  data1.length);
+    // index = parseInt(index);
     console.log(index);
+    console.log(data1[index]);
     if (confirm(data1[index] + "(이/가) 있는 곳으로 이동하시겠습니까?"))
     {
         var tempIndex;
-        if (index > 62)
+        if (index > 61)
             tempIndex = 0;
         else
             tempIndex = 1;
         
+        Coloring(index);
         document.getElementById(data2[tempIndex]).scrollIntoView();
     }
     
+}
+
+function Coloring(index)
+{
+    // 자식들 사이에 이상한 text값들이 있어서 처리 해야 함;
+    var tr = index;
+    var td = index % 5;
+    var tableId;
+    var indexTable;
+
+    if (index - 61 <= 0)
+    {
+        tableId = "outdoor_hobby";
+    }
+    else
+    {
+        tableId = "indoor_hobby";
+        tr -= 62;
+        td = (index - 62) % 5;
+    }
+    tr /= 5;
+    tr = parseInt(tr) * 2;
+    td = td * 2 + 1;
+
+    indexTable = document.getElementById(tableId).childNodes[3].childNodes[1];
+    indexTable = indexTable.childNodes[tr].childNodes[td];
+    console.log(indexTable);
+
+    indexTable.style.backgroundColor = "red";
+    // Twinkling(indexTable);
+}
+
+function Twinkling(element)
+{
+    console.log(element);
+    if (element.style.backgroundColor == "white")
+    {
+        console.log(1);
+        element.style.backgroundColor = "red";
+    }
+    else
+    {
+        console.log(2);
+        element.style.backgroundColor = "white";
+    }
+}
+
+function EmailCopy()
+{
+    const copyText = document.getElementById("email").textContent; // 복사할 값
+    const textArea = document.createElement('textarea'); // 잠깐 만들 textarea
+
+    document.body.appendChild(textArea); // 복사하기 위해 생성
+    textArea.value = copyText; // 복사할 값 입력
+
+    textArea.select(); // 값 선택
+    document.execCommand("Copy"); // 선택된 값 복사
+
+    document.body.removeChild(textArea); // textArea 제거
+
+    alert("이메일이 복사 되었습니다."); // 복사 되면 메시지 출력
 }
 
 function test()
