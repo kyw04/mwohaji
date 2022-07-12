@@ -45,6 +45,7 @@ function close_submenu(id)
     li.style.height = 0;
 }
 
+var intervalId;
 function random_click()
 {
     let index = Math.floor(Math.random() *  data1.length);
@@ -58,6 +59,8 @@ function random_click()
             tempIndex = 0;
         else
             tempIndex = 1;
+        
+        clearInterval(intervalId);
         
         Coloring(index);
         document.getElementById(data2[tempIndex]).scrollIntoView();
@@ -84,17 +87,29 @@ function Coloring(index)
         td = (index - 62) % 5;
     }
     tr /= 5;
-    tr = parseInt(tr) * 2;
-    td = td * 2 + 1;
+    tr = parseInt(tr) * 2; // text값들 처리를 위해 곱하기 2
+    td = td * 2 + 1; // text값들 처리를 위해 2를 곱하고 +1까지
 
     indexTable = document.getElementById(tableId).childNodes[3].childNodes[1];
+    console.log();
+
+    let n = indexTable.childNodes.length;
+    let m = indexTable.childNodes[0].childNodes.length;
+    console.log(indexTable.childNodes[0].childNodes[0]);
+    for (let i = 0; i < n; i += 2)
+    {
+        for (let j = 1; j < m; j += 2)
+        {
+            indexTable.childNodes[i].childNodes[j].style.backgroundColor = "white";
+        }
+    }
+
     indexTable = indexTable.childNodes[tr].childNodes[td];
     console.log(indexTable);
 
-    indexTable.style.backgroundColor = "white";
     Twinkling(indexTable);
 }
-var intervalId;
+
 function Twinkling(element)
 {
     console.log(element.style.backgroundColor);
