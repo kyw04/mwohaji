@@ -91,22 +91,24 @@ function Coloring(index)
     indexTable = indexTable.childNodes[tr].childNodes[td];
     console.log(indexTable);
 
-    indexTable.style.backgroundColor = "red";
-    // Twinkling(indexTable);
+    indexTable.style.backgroundColor = "white";
+    Twinkling(indexTable);
 }
-
+var intervalId;
 function Twinkling(element)
 {
-    console.log(element);
+    console.log(element.style.backgroundColor);
     if (element.style.backgroundColor == "white")
     {
-        console.log(1);
         element.style.backgroundColor = "red";
+        intervalId = setInterval(Twinkling, 1500, element);
+        console.log("set");
     }
     else
     {
-        console.log(2);
         element.style.backgroundColor = "white";
+        clearInterval(intervalId);
+        console.log("clear");
     }
 }
 
