@@ -60,10 +60,10 @@ function random_click()
         else
             tempIndex = 1;
         
-        clearInterval(intervalId);
-        
-        Coloring(index);
         document.getElementById(data2[tempIndex]).scrollIntoView();
+        
+        clearInterval(intervalId);
+        Coloring(index);
     }
     
 }
@@ -87,8 +87,8 @@ function Coloring(index)
         td = (index - 62) % 5;
     }
     tr /= 5;
-    tr = parseInt(tr) * 2; // text값들 처리를 위해 곱하기 2
-    td = td * 2 + 1; // text값들 처리를 위해 2를 곱하고 +1까지
+    tr = parseInt(tr) * 2; // text값 처리를 위해 곱하기 2
+    td = td * 2 + 1; // text값 처리를 위해 2를 곱하고 +1까지
 
     indexTable = document.getElementById(tableId).childNodes[3].childNodes[1];
     console.log();
@@ -115,15 +115,13 @@ function Twinkling(element)
     console.log(element.style.backgroundColor);
     if (element.style.backgroundColor == "white")
     {
-        element.style.backgroundColor = "red";
+        element.style.backgroundColor = "#cf81ff";
         intervalId = setInterval(Twinkling, 1500, element);
-        console.log("set");
     }
     else
     {
         element.style.backgroundColor = "white";
         clearInterval(intervalId);
-        console.log("clear");
     }
 }
 

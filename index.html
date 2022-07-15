@@ -19,39 +19,35 @@
         </div>
     </ul><br>
     
+
     <div id="menu">
-        <div class="random" onclick="random_click()"><a href="#">랜덤</a></div>
+        <div class="random" onclick="random_click()">랜덤</div>
 
         <ul class="vartical_menu">
-            <li onmouseenter="show_submenu('hobby')" onmouseleave="close_submenu('hobby')">
+            <li onmouseenter="show_submenu('hobby1')" onmouseleave="close_submenu('hobby1')">
                 <a href="#hobby" >취미</a>
-                <ul id="hobby">
+                <ul id="hobby1">
                 <li><a href="#indoor_hobby"> 실내 취미</a></li>
                 <li><a href="#outdoor_hobby"> 야외 취미</a></li>
                 </ul>
             </li>
 
-            <li onmouseenter="show_submenu('game')" onmouseleave="close_submenu('game')">
+            <li onmouseenter="show_submenu('game1')" onmouseleave="close_submenu('game1')">
                 <a href="#game">게임</a>
-                <ul id="game">
+                <ul id="game1">
                 <li><a href="#PC_game">PC 게임</a></li>
                 <li><a href="#Mobile_game">모바일 게임</a></li>
                 </ul>
             </li>
-
-            <li onmouseenter="show_submenu('test')" onmouseleave="close_submenu('test')">
-                <a href="#">취미</a>
-                <ul id="test">
-                <li><a href="#">submenu01</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-                </ul>
-            </li>
         </ul>
     </div>
+    
     <div id="index">
+        
+        <div id="news">
+            <iframe src="https://m.news.naver.com/" title="내용" width="800px" height="250px"></iframe>
+        </div>
+
         <div id="hobby">
             <div id="indoor_hobby">
                 <h2>실내 취미</h2>
@@ -241,6 +237,15 @@
             </div>
         </div>
     </div>
+
+    <div id="game">
+        <ul>
+            <li><a href="https://jstris.jezevec10.com/" target="_blank">Jstris</a></li>
+            <li><a href="" target="_blank"></a></li>
+        </ul>
+    </div>
+
+  
 
 <!-- 
     <form id="test" action="">

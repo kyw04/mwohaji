@@ -22,13 +22,13 @@ li {
     list-style: none;
 }
 table, th, tr, td {
-    border: 1px solid black;
+    border: 2px solid rgb(52, 21, 52);
     text-align: center;
     background-color: white;
     transition: 1.5s;
     border-collapse: collapse;
-    padding: 3px;
-    height: 50px;
+    padding: 2px;
+    height: 35px;
     width: 800px;
 }
 
@@ -41,7 +41,7 @@ input {
     overflow: hidden;
     width: 300px;
     position: relative;
-    background-color: rgb(249, 221, 255);
+    background-color: #f9ddff;
     transition-duration: 0.5s;
 }
 input:focus {
